@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "D:\\x86_64-7.3.0-release-win32-sjlj-rt_v5-rev0\\mingw64\\bin\\gcc"
+        }
+    ],
+    "version": 4
+}
