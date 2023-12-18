@@ -1,0 +1,4 @@
+
+[2023-12-18 16:02:41 DEBUG main.cpp:7] hello world
+[2023-12-18 16:02:41 INFO main.cpp:8] type error
+[2023-12-18 16:02:41 FATAL main.cpp:9] lalalal
