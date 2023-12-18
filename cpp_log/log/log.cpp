@@ -49,9 +49,9 @@ void Logger::log(Level level, const char* file, int line, const char* format, ..
         throw std::logic_error("open file failed" + m_filename);
     }
 
-    time_t ticks = time(NULL);
-    struct tm* ptm = localtime(&ticks);
-    char timestamp[32];
+    time_t ticks = time(0);
+    tm* ptm = localtime(&ticks);
+    char timestamp[80];
     memset(timestamp, 0, sizeof(timestamp));
     strftime(timestamp, sizeof(timestamp), "%Y-%m-%d %H:%M:%S", ptm);
 
@@ -87,7 +87,7 @@ void Logger::log(Level level, const char* file, int line, const char* format, ..
 
     if (m_len >= m_max && m_max > 0)
     {
-
+        rotate();
     }
 
 }

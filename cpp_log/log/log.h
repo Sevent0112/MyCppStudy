@@ -6,6 +6,7 @@
 #include<time.h>
 #include<string.h>
 #include<stdexcept>
+#include<ctime>
 #include<stdarg.h>
 namespace sevent::utility
 {
@@ -50,7 +51,7 @@ class Logger
         Logger();
         ~Logger();
         void rotate();
-        
+
     private:
         std::string m_filename;
         std::ofstream m_fout;
