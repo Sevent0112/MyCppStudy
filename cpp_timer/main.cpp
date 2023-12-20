@@ -1,4 +1,4 @@
-#include "utility/timer.h"
+#include "timer/timer_manager.h"
 
 void foo()
 {
@@ -12,9 +12,14 @@ void bar(const std::string& str)
 
 int main(int argc, char** argv)
 {
-    sevent::utility::Timer t1(3);
-    t1.start(1000, bar, "abc");
-    std::getchar();
+    sevent::timer::TimerManager t;
+    t.schedule(100, 3, foo);
+    t.schedule(1500, 4, bar, "str");
+
+    while(true)
+    {
+        t.update();
+    }
     return 0;
 
 }

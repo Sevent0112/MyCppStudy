@@ -53,7 +53,7 @@ namespace sevent::utility
                         }
                     }
                 });
-                m_thread.detach();
+                m_thread.join();
 
             }   
 

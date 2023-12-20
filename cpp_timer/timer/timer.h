@@ -13,10 +13,10 @@ namespace sevent::timer
             Timer(int repeat);
             ~Timer();
 
-            static int64_t Timer::now();
+            static int64_t now();
 
             template<class F, class... Args>
-            void callback(int milliseconds, F&& func, Args... args)
+            void callback(int milliseconds, F&& func, Args&&... args)
             {
                 m_period = milliseconds;
                 m_func = std::bind(std::forward<F>(func), std::forward<Args>(args)...);
@@ -32,8 +32,6 @@ namespace sevent::timer
 
             friend class TimerManager;
             
-
-
 
     };
 }
